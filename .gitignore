@@ -1,6 +1,8 @@
 venv/
 .envrc
 .idea/
+*_profile.txt
+*_facts.txt
 
 ### Python template
 # Byte-compiled / optimized / DLL files
