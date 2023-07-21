@@ -6,8 +6,6 @@ from dotenv import load_dotenv
 
 from promptreader import PromptReader
 
-NAME = "Douwe Osinga"
-
 
 def call_open_ai(messages, tries=0):
     try:
@@ -92,8 +90,10 @@ if __name__ == "__main__":
     load_dotenv()
     openai.api_key = os.environ["OPENAI_API_KEY"]
 
-    facts = get_facts(NAME)
+    name = os.environ["PERSON"]
+
+    facts = get_facts(name)
     print(f"using {len(facts)} facts")
 
-    profile = create_profile(NAME, facts)
+    profile = create_profile(name, facts)
     print(profile)
